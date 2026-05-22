@@ -12,7 +12,7 @@ if env_file.exists():
 
 SECRET_KEY = env('DJANGO_SECRET_KEY', default=os.environ.get('DJANGO_SECRET_KEY', 'change-me'))
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
