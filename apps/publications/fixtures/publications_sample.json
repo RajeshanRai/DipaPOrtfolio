@@ -1,0 +1,17 @@
+[
+  {"model": "publications.publication", "pk": 1, "fields": {"title": "Moisture Dynamics in Agaricus Production", "venue": "Mycology Journal", "year": 2024, "url": "https://example.org/pub1"}},
+  {"model": "publications.publication", "pk": 2, "fields": {"title": "Sensor Networks for Indoor Fungi", "venue": "Sensors", "year": 2023, "url": "https://example.org/pub2"}},
+  {"model": "publications.publication", "pk": 3, "fields": {"title": "Predictive Yield Models", "venue": "AgriTech Conf.", "year": 2025, "url": "https://example.org/pub3"}},
+  {"model": "publications.publication", "pk": 4, "fields": {"title": "Misting Control at Scale", "venue": "Process Engineering", "year": 2022, "url": "https://example.org/pub4"}},
+  {"model": "publications.publication", "pk": 5, "fields": {"title": "Low-cost Imaging for Farms", "venue": "Open Agriculture", "year": 2023, "url": "https://example.org/pub5"}},
+  {"model": "publications.publication", "pk": 6, "fields": {"title": "Traceability Practices", "venue": "Food Safety Review", "year": 2021, "url": "https://example.org/pub6"}},
+  {"model": "publications.publication", "pk": 7, "fields": {"title": "Digital Twins in Horticulture", "venue": "HortiTech", "year": 2024, "url": "https://example.org/pub7"}},
+  {"model": "publications.publication", "pk": 8, "fields": {"title": "Substrate Recipe Variability", "venue": "Agri Systems", "year": 2022, "url": "https://example.org/pub8"}},
+  {"model": "publications.publication", "pk": 9, "fields": {"title": "Contamination Monitoring", "venue": "Biosafety Reports", "year": 2020, "url": "https://example.org/pub9"}},
+  {"model": "publications.publication", "pk": 10, "fields": {"title": "Operational Checklists Study", "venue": "Journal of Ops", "year": 2021, "url": "https://example.org/pub10"}},
+  {"model": "publications.publication", "pk": 11, "fields": {"title": "Low-cost Sensors Performance", "venue": "Sensors", "year": 2023, "url": "https://example.org/pub11"}},
+  {"model": "publications.publication", "pk": 12, "fields": {"title": "Reproducible Spawn Protocols", "venue": "Myco Methods", "year": 2022, "url": "https://example.org/pub12"}},
+  {"model": "publications.publication", "pk": 13, "fields": {"title": "Economic Models for Growers", "venue": "AgriEcon", "year": 2024, "url": "https://example.org/pub13"}},
+  {"model": "publications.publication", "pk": 14, "fields": {"title": "Edge Analytics for Farms", "venue": "Distributed Systems", "year": 2025, "url": "https://example.org/pub14"}},
+  {"model": "publications.publication", "pk": 15, "fields": {"title": "Mycelial Health Indicators", "venue": "Fungal Biology", "year": 2023, "url": "https://example.org/pub15"}}
+]

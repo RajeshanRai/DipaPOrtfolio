@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dipa Rai — Portfolio</title>
+    <link rel="stylesheet" href="/static/core/css/tailwind.css">
+    <!-- Tailwind Play CDN fallback (applies utilities if local build missing) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="/static/core/css/pixel.css">
+    <script defer src="/static/core/js/pixel.js"></script>
+  </head>
+  <body class="page-shell text-slate-100 {% block body_class %}{% endblock %}">
+    <img class="bg-image" src="/static/mush.png" aria-hidden="true" alt="" />
+    {% include 'core/nav.html' %}
+    <main class="main-content">
+      {% block content %}{% endblock %}
+    </main>
+    {% include 'core/footer.html' %}
+  </body>
+</html>

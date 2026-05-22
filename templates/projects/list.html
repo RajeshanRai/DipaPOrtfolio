@@ -1,0 +1,50 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+  <h2 class="text-2xl pixel-title">Projects</h2>
+  {% if projects %}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+      {% for p in projects %}
+        <a href="{{ p.get_absolute_url }}" class="card p-4 flex items-start gap-3">
+          <img src="/static/core/img/mushroom-pixel.svg" alt="mush" class="pixelated" style="width:48px;height:48px"/>
+          <div>
+            <div class="font-medium">{{ p.title }}</div>
+            <p class="text-sm text-gray-700 mt-2">{{ p.summary }}</p>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="mt-4 text-gray-700">No projects in the database — sample projects below demonstrate the kind of work Dipa does.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+      <div class="card p-4 flex items-start gap-3">
+        <img src="/static/core/img/icon-gear.svg" alt="gear" class="pixelated" style="width:48px;height:48px"/>
+        <div>
+          <div class="font-medium">MycoTelemetry — Sensor Network for Mushroom Farms</div>
+          <p class="text-sm text-gray-700 mt-2">A robust, low-power sensor and telemetry pipeline to monitor humidity, CO2, and substrate conditions across large cultivation rooms. Includes edge buffering and secure cloud sync.</p>
+        </div>
+      </div>
+      <div class="card p-4 flex items-start gap-3">
+        <img src="/static/core/img/mushroom-pixel.svg" alt="mush" class="pixelated" style="width:48px;height:48px"/>
+        <div>
+          <div class="font-medium">SterileFlow — Automated Sterilization Controller</div>
+          <p class="text-sm text-gray-700 mt-2">Automation controller for sterilization cycles with logging, alerting, and fail-safe interlocks designed for laboratory-grade reproducibility.</p>
+        </div>
+      </div>
+      <div class="card p-4 flex items-start gap-3">
+        <img src="/static/core/img/icon-book.svg" alt="book" class="pixelated" style="width:48px;height:48px"/>
+        <div>
+          <div class="font-medium">YieldPredict — ML Yield Predictor</div>
+          <p class="text-sm text-gray-700 mt-2">Machine-learning models trained on environmental and substrate features to predict yield and optimize harvest timing for gourmet and medicinal mushroom strains.</p>
+        </div>
+      </div>
+      <div class="card p-4 flex items-start gap-3">
+        <img src="/static/core/img/icon-book.svg" alt="book" class="pixelated" style="width:48px;height:48px"/>
+        <div>
+          <div class="font-medium">MycoDocs — SOP & Traceability Platform</div>
+          <p class="text-sm text-gray-700 mt-2">A lightweight documentation and batch-traceability system that integrates with barcode/RFID scanners to track substrate batches and process steps.</p>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}

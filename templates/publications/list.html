@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+
+{% block body_class %}publications-page{% endblock %}
+
+{% block content %}
+  <h2 class="pixel-title text-2xl">Publications</h2>
+  {% if publications %}
+    <ul class="mt-4">
+      {% for p in publications %}
+        <li class="py-2 flex items-center gap-3">
+          <img src="/static/core/img/icon-book.svg" alt="pub" style="width:28px;height:28px" class="pixelated"/>
+          <div>
+            {{ p.title }}
+            <div class="text-xs text-gray-500">{{ p.venue }} {{ p.year }}</div>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="mt-4 text-gray-700">No publications found. Example publications:</p>
+    <ul class="mt-4">
+      <li class="py-2">"Environmental Control Strategies for Mycelial Growth" — Mycology Journal, 2023</li>
+      <li class="py-2">"Automated Sterilization Protocols for Small Labs" — BioProcess Conference, 2022</li>
+    </ul>
+  {% endif %}
+{% endblock %}

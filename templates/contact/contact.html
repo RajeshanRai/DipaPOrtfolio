@@ -1,0 +1,98 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+  <div class="contact-page-wrapper">
+    <img class="contact-bg-mushroom" src="/static/mush.png" aria-hidden="true" alt="" />
+  <section class="contact-hero">
+    <div class="container">
+      <div class="hero-text">
+        <p class="section-kicker">Get in Touch</p>
+        <h1>Let's collaborate on something amazing</h1>
+        <p class="hero-subtitle">Whether you have questions about research, want to discuss a project, or just want to say hello — I'd love to hear from you.</p>
+      </div>
+    </div>
+  </section>
+
+  {% if sent %}
+    <section class="contact-success">
+      <div class="container">
+        <div class="success-card">
+          <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+          <h2>Message Sent!</h2>
+          <p>Thanks for reaching out. I'll get back to you as soon as possible.</p>
+          <a href="/" class="btn btn-primary">Back Home</a>
+        </div>
+      </div>
+    </section>
+  {% else %}
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-inner">
+          <!-- Contact Methods Panel -->
+          <div class="contact-methods">
+            <h2>Ways to reach me</h2>
+            
+            <div class="method-card method-card-1">
+              <div class="method-icon"><i class="fas fa-envelope"></i></div>
+              <h3>Email</h3>
+              <p class="method-text">dipa at example dot com</p>
+              <p class="method-note">Best for detailed inquiries</p>
+            </div>
+
+            <div class="method-card method-card-2">
+              <div class="method-icon"><i class="fas fa-share-alt"></i></div>
+              <h3>Social</h3>
+              <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+
+            <div class="method-card method-card-3">
+              <div class="method-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <h3>Location</h3>
+              <p class="method-text">Nepal</p>
+              <p class="method-note">Available for remote collaboration</p>
+            </div>
+          </div>
+
+          <!-- Contact Form Panel -->
+          <div class="contact-form-panel">
+            <h2>Send me a message</h2>
+            <form method="post" class="contact-form">
+              {% csrf_token %}
+              
+              <div class="form-group">
+                {{ form.name }}
+                <label for="{{ form.name.id_for_label }}">Your Name</label>
+                {% if form.name.errors %}
+                  <span class="form-error">{{ form.name.errors.0 }}</span>
+                {% endif %}
+              </div>
+
+              <div class="form-group">
+                {{ form.email }}
+                <label for="{{ form.email.id_for_label }}">Your Email</label>
+                {% if form.email.errors %}
+                  <span class="form-error">{{ form.email.errors.0 }}</span>
+                {% endif %}
+              </div>
+
+              <div class="form-group form-group-large">
+                {{ form.message }}
+                <label for="{{ form.message.id_for_label }}">Message</label>
+                {% if form.message.errors %}
+                  <span class="form-error">{{ form.message.errors.0 }}</span>
+                {% endif %}
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+  {% if project %}
+    <article>
+      <h1 class="text-2xl pixel-title">{{ project.title }}</h1>
+      <p class="mt-2 text-gray-700">{{ project.summary }}</p>
+      <section class="mt-4">
+        <h3 class="font-medium">Role & Contributions</h3>
+        <p class="text-sm text-gray-700 mt-2">Lead engineer: system design, data pipeline, and deployment.</p>
+      </section>
+      <section class="mt-4">
+        <h3 class="font-medium">Outcomes</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Improved reliability and reduced downtime</li>
+          <li>Automated alerts and 24/7 monitoring</li>
+        </ul>
+      </section>
+    </article>
+  {% else %}
+    <p class="text-gray-700">Project not found.</p>
+  {% endif %}
+{% endblock %}
