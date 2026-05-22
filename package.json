@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build:css": "tailwindcss -i ./static_src/css/input.css -o ./static/core/css/tailwind.css",
-    "watch:css": "tailwindcss -i ./static_src/css/input.css -o ./static/core/css/tailwind.css --watch"
+    "watch:css": "tailwindcss -i ./static_src/css/input.css -o ./static/core/css/tailwind.css --watch",
+    "tailwind:disable": "echo \"Tailwind disabled; to re-enable restore backups and uncomment templates/core/base.html\""
   }
 }
